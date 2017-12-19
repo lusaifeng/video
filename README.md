@@ -1,4 +1,4 @@
-# rest-admin
+# video
 
 > A Vue.js project
 
