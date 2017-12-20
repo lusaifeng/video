@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import History from '../components/History'
 import Search from '../components/Search'
 import Video from '../components/Video'
+import About from '../components/About'
 
 const router = new Router({
     routes: [{
@@ -37,6 +38,11 @@ const router = new Router({
             path: '/video',
             name: 'video',
             component: Video
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: About
         }
     ]
 })

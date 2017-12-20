@@ -35,7 +35,7 @@
         </div>
 
         <div class="mt-4">
-          <b-button variant="danger" size="lg" block to="/">登 录</b-button>
+          <b-button variant="danger" size="lg" block>登 录</b-button>
         </div>
 
         <div class="or"></div>

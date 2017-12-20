@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    @copyright 上海庚易有限公司
+    @copyright 上海庚易科技有限公司
   </div>
 </template>
 <script>

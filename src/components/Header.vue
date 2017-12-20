@@ -60,6 +60,13 @@
           <div class="notification-list">
             <div class="notification-info">
               <router-link to="/login">
+                <i class="fa fa-diamond color-1"></i>
+                成为会员 <span class="color-3">199/季度</span>
+                <h5 class="time">- 会员期间可观看所有视频 -</h5>
+              </router-link>
+            </div>
+            <div class="notification-info">
+              <router-link to="/login">
                 <i class="fa fa-sign-out color-2"></i>
                 退出
               </router-link>
@@ -83,6 +90,10 @@ export default {
         {
           name: "历史观看",
           href: "/history"
+        },
+        {
+          name: "关于我们",
+          href: "/about"
         }
       ]
     };

@@ -180,6 +180,13 @@ header {
   .video-item {
     margin-bottom: 15px;
     margin-top: 15px;
+    &:hover {
+      box-shadow: 0 0 5px #aaa;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
     .thumb {
       position: relative;
       small.time {
@@ -204,16 +211,15 @@ header {
       background-color: #fff;
       padding: 25px;
     }
-    a.title {
-      font-size: 12px;
+    .title {
+      font-size: 13px;
       font-weight: 900;
       text-transform: uppercase;
       color: #333333;
-      line-height: 19px;
       text-decoration: none;
       display: block;
     }
-    a.channel-name {
+    .channel-name {
       display: block;
       font-size: 12px;
       font-weight: 500;
@@ -222,7 +228,7 @@ header {
       margin-bottom: 4px;
       line-height: 19px;
     }
-    a.channel-name .fa {
+    .channel-name .fa {
       color: #fab318;
     }
     span {
@@ -264,6 +270,7 @@ header {
   .related-video-item {
     margin-top: 15px;
     margin-bottom: 15px;
+    position: relative;
     &:after {
       content: " ";
       display: block;
@@ -300,7 +307,7 @@ header {
       }
     }
 
-    a.title {
+    .title {
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
@@ -308,18 +315,6 @@ header {
       line-height: 19px;
       text-decoration: none;
       display: block;
-    }
-    a.channel-name {
-      display: block;
-      font-size: 12px;
-      font-weight: 500;
-      color: #a7a7a7;
-      margin-top: 4px;
-      margin-bottom: 4px;
-      line-height: 19px;
-    }
-    a.channel-name .fa {
-      color: #fab318;
     }
   }
   .watch {
@@ -431,4 +426,9 @@ header {
   .hidden-sm {
     display: none !important;
   }
+}
+
+.about {
+  background: #fff;
+  padding: 30px;
 }

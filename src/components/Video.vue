@@ -4,7 +4,7 @@
     <div class="main">
       
       <b-row>
-        <b-col lg="8">
+        <b-col lg="9">
           <div class="watch">
             <h1 class="video-title">视频标题</h1>
             <div class="video">
@@ -53,14 +53,17 @@
             </div>
           </div>
         </b-col>
-        <b-col lg="4">
+        <b-col lg="3">
           <div class="related-video">
             <div class="related-video-item" v-for="item in videos" :key="item.name">
-              <div class="thumb">
-                <small class="time">{{item.time}}</small>
-                <router-link :to="item.url"><img :src="item.img" ></router-link>
-              </div>
-              <router-link :to="item.url" class="title">Lorem Ipsum is simply dummy text of the printing and </router-link>
+              <router-link :to="item.url">
+                <div class="thumb">
+                  <small class="time">{{item.time}}</small>
+                  <img :src="item.img" >
+                </div>
+                <span class="title">{{item.title}}</span>
+
+              </router-link>
             </div>
           </div>
         </b-col>
@@ -99,60 +102,60 @@ export default {
       ],
       videos: [
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: 'Vue $emit 细节解说',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         },
         {
-          img: "../../static/img/v1.png",
-          time: "20:21",
-          url: "/video",
-          title: "Lorem Ipsum is simply dummy text of the printing and",
+          img: '../../static/img/v1.png',
+          time: '20:21',
+          url: '/video',
+          title: '7天学会HTML排版',
           view: 12321,
-          update: "2017-10-23"
+          update: '2017-10-23'
         }
       ],
       comments: [
