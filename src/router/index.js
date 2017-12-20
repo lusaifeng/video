@@ -7,6 +7,7 @@ import Login from '../components/Login'
 import Layout from '../components/Layout'
 import History from '../components/History'
 import Search from '../components/Search'
+import Video from '../components/Video'
 
 const router = new Router({
     routes: [{
@@ -31,6 +32,11 @@ const router = new Router({
             path: '/search',
             name: 'search',
             component: Search
+        },
+        {
+            path: '/video',
+            name: 'video',
+            component: Video
         }
     ]
 })

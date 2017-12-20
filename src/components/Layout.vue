@@ -10,7 +10,7 @@
             <div class="thumb">
               <div class="hover-efect"></div>
               <small class="time">{{item.time}}</small>
-              <a :href="item.url"><img :src="item.img" alt=""></a>
+              <router-link :to="item.url"><img :src="item.img"></router-link>
             </div>
             <div class="video-info">
               <a href="#" class="title">{{item.title}}</a>
@@ -43,7 +43,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -51,7 +51,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -59,7 +59,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -67,7 +67,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -75,7 +75,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -83,7 +83,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'
@@ -91,7 +91,7 @@ export default {
         {
           img: '../../static/img/v1.png',
           time: '20:21',
-          url: '/',
+          url: '/video',
           title: 'Lorem Ipsum is simply dummy text of the printing and',
           view: 12321,
           update: '2017-10-23'

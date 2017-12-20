@@ -20,6 +20,7 @@
     "node-sass": "^4.7.2",
     "shelljs": "^0.7.8",
     "vue": "^2.4.4",
+    "vue-dplayer": "^0.0.3",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

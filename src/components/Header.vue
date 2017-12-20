@@ -31,17 +31,40 @@
             <i class="fa fa-bell-o"></i>
             <b-badge variant="danger">5</b-badge>
           </template>
-          <b-dropdown-item href="#">Action</b-dropdown-item>
-          <b-dropdown-item href="#">Another action</b-dropdown-item>
-          <b-dropdown-item href="#">Something else here...</b-dropdown-item>
+          
+          <div class="notification-list">
+            <div class="notification-info">
+              <router-link to="/video">
+                <i class="fa fa-video-camera color-1"></i>
+                vue props 细节详解 <span>视频</span>
+                <h5 class="time">更新于4小时前</h5>
+              </router-link>
+            </div>
+            <div class="notification-info">
+              <router-link to="/video">
+                <i class="fa fa-comment color-3"></i>
+                vue-router 视频教程 <span>评论</span>
+                <h5 class="time">评论于2017-11-22 10:02:23</h5>
+              </router-link>
+            </div>
+          </div>
+            
         </b-dropdown>
 
         <b-dropdown id="ddown1" no-caret class="ml-3 account">
           <template slot="button-content">
-            <span class="account-name">小路</span>
+            <img src="../../static/img/c1.jpg" class="account-author">
+            <span class="account-name">杰克逊</span>
             <i class="fa fa-angle-down"></i>
           </template>
-          <b-dropdown-item to="/login">退出</b-dropdown-item>
+          <div class="notification-list">
+            <div class="notification-info">
+              <router-link to="/login">
+                <i class="fa fa-sign-out color-2"></i>
+                退出
+              </router-link>
+            </div>
+          </div>
         </b-dropdown>
       </b-col>
     </b-row>
@@ -54,15 +77,15 @@ export default {
     return {
       navItems: [
         {
-          name: '视频观看',
-          href: '/'
+          name: "视频观看",
+          href: "/"
         },
         {
-          name: '历史观看',
-          href: '/history'
+          name: "历史观看",
+          href: "/history"
         }
       ]
-    }
+    };
   },
   methods: {}
 };
