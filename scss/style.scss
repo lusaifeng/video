@@ -224,6 +224,20 @@ header {
     .video-info {
       background-color: #fff;
       padding: 25px;
+      position: relative;
+      .price {
+        position: absolute;
+        right: 25px;
+        bottom: 2px;
+        font-family: 'Arial';
+        color: red;
+        strong {
+          vertical-align: -1px;
+          font-size: 2rem;
+          margin-left: 2px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+      }
     }
     .title {
       font-size: 13px;
@@ -297,6 +311,9 @@ header {
     margin-top: 15px;
     margin-bottom: 15px;
     position: relative;
+    a:hover {
+      text-decoration: none;
+    }
     &:after {
       content: " ";
       display: block;
@@ -347,6 +364,13 @@ header {
     background-color: #FFF;
     padding: 30px;
     margin-bottom: 30px;
+    .no-buy {
+      float: right; 
+      span {
+        font-size: 1.5rem;
+        vertical-align: -2px;
+      }
+    }
     .video-title {
       font-size: 20px;
       margin-bottom: 30px;
@@ -461,4 +485,25 @@ header {
     font-size: 18px;
     color: #ff5e3a
   }
+}
+
+.buy-head {
+  background-color: #444444;
+  padding: 20px;
+  h1 {
+    float: right;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+.buy {
+  overflow: hidden;
+  padding: 30px 0;
+  .card {
+    margin: 0 auto;
+  }
+  
 }

@@ -6,17 +6,28 @@
       <b-row>
         <b-col lg="8">
           <div class="watch">
-            <h1 class="video-title">视频标题</h1>
-            <div class="video">
+            <h1 class="video-title">
+              视频标题
+              <b-button class="no-buy" @click="buyThis" v-show="isBuy == false" variant="warning">
+                &yen; <span>6.6</span> 立即购买
+              </b-button>
+            </h1>
+            <div class="video" v-show="isBuy">
               <d-player :video="video"
-                :autoplay="false"
+                :autoplay="autoplay"
                 :contextmenu="contextmenu"
                 :screenshot="false"
                 @play="play"
                 ref="player">
               </d-player>
             </div>
+            
             <div id="comments" class="post-comments">
+              <h3 class="post-box-title">课程简介</h3>
+              <p>BAT企业级真实项目为基础</p>
+              <p>ES6+ 开发完备的电商网站账号体系SDK</p>
+              <p>直接在实战中运用ES6+ 语法，提升自己的开发效率和代码可维护性</p>    
+
               <h3 class="post-box-title"><span>{{comments.length}}</span> 条评论</h3>
               <ul class="comments-list">
                 <li v-for="(item, index) in comments" :key="index">
@@ -72,6 +83,36 @@
     </div>
 
     <v-footer />
+
+    <b-modal ref="BuyModel" hide-footer hide-header>
+      <div class="buy-head">
+        <h1>购买</h1>
+        <div id="logo">
+          <a href="/"><img src="../../static/img/logo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="buy"> 
+        <b-card title="Vue $emit 细节解说"
+          img-src="../../static/img/v1.png"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2">
+          <p class="card-text">
+            <b-form-group>
+              <b-form-radio-group id="buyType" 
+                v-model="selected" 
+                :options="buyTypes" 
+                name="buyType">
+              </b-form-radio-group>
+            </b-form-group>
+          </p>
+          <b-button href="#" variant="warning" class="pull-right">&yen;6.6 支付</b-button>
+        </b-card>
+      </div>
+    </b-modal>
+
   </div>
 </template>
 <script>
@@ -87,10 +128,11 @@ export default {
   },
   data() {
     return {
+      isBuy: true,
       video: {
         url: 'http://static.smartisanos.cn/common/video/t1-ui.mp4',
       },
-      autoplay: false,
+      autoplay: true,
       player: null,
       contextmenu: [],
       videos: [
@@ -172,20 +214,25 @@ export default {
           time: '2017-10-16 10:00:03',
           content: '阅读器在阅读页面布局时会被可读内容分散注意力，这是一个长期以来的事实。 使用Lorem Ipsum的要点'
         }
+      ],
+      isBuyModel: true,
+      selected: 'zhifubaoPay',
+      buyTypes: [
+        { text: '支付宝', value: 'zhifubaoPay' },
+        { text: '微信', value: 'weixinPay' }
       ]
     };
   },
   mounted() {
     this.player = this.$refs.player.dp
+    
   },
   methods: {
     play() {
       console.log('play callback')
     },
-    switchHandle() {
-      this.player.switchVideo({
-        url: 'http://static.smartisanos.cn/common/video/video-jgpro.mp4'
-      })
+    buyThis(){
+      this.$refs.BuyModel.show();
     }
   }
 };

@@ -61,7 +61,7 @@
             <div class="notification-info">
               <router-link to="/login">
                 <i class="fa fa-diamond color-1"></i>
-                成为会员 <span class="color-3">199/季度</span>
+                成为会员 <span class="color-3">699/年</span>
                 <h5 class="time">- 会员期间可观看所有视频 -</h5>
               </router-link>
             </div>

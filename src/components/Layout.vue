@@ -21,6 +21,9 @@
                   <span class="views"><i class="fa fa-eye"></i>{{item.view}} </span>
                   <span class="date"><i class="fa fa-clock-o"></i>{{item.update}} </span>
                 </div>
+                <div class="price">
+                  &yen;<strong>6.6</strong>
+                </div>
               </div>
             </router-link>
           </div>
