@@ -4,7 +4,7 @@
     <div class="main">
       
       <b-row>
-        <b-col lg="9">
+        <b-col lg="8">
           <div class="watch">
             <h1 class="video-title">视频标题</h1>
             <div class="video">
@@ -53,8 +53,9 @@
             </div>
           </div>
         </b-col>
-        <b-col lg="3">
+        <b-col lg="4">
           <div class="related-video">
+            <h1 class="video-title">本章课程</h1>
             <div class="related-video-item" v-for="item in videos" :key="item.name">
               <router-link :to="item.url">
                 <div class="thumb">
@@ -62,7 +63,6 @@
                   <img :src="item.img" >
                 </div>
                 <span class="title">{{item.title}}</span>
-
               </router-link>
             </div>
           </div>
@@ -89,17 +89,10 @@ export default {
     return {
       video: {
         url: 'http://static.smartisanos.cn/common/video/t1-ui.mp4',
-        pic: 'http://static.smartisanos.cn/pr/img/video/video_03_cc87ce5bdb.jpg'
       },
-      videoUrl: 'http://static.smartisanos.cn/common/video/video-jgpro.mp4',
       autoplay: false,
       player: null,
-      contextmenu: [
-          {
-              text: 'GitHub',
-              link: 'https://github.com/MoePlayer/vue-dplayer'
-          }
-      ],
+      contextmenu: [],
       videos: [
         {
           img: '../../static/img/v1.png',

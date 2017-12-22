@@ -25,7 +25,8 @@ img {
   margin-bottom: 30px;
 }
 
-.login {
+.login,
+.model-login {
   background: #237f81;
   height: 100vh;
   overflow: hidden;
@@ -67,6 +68,19 @@ img {
     &-body {
       padding: 30px;
     }
+  }
+}
+
+.modal-body {
+  padding:0;
+}
+.model-login {
+  text-align: left;
+  background: none;
+  height: auto;
+  .login-form {
+    margin: 0;
+    max-width: none;
   }
 }
 
@@ -218,6 +232,14 @@ header {
       color: #333333;
       text-decoration: none;
       display: block;
+      span {
+        padding: 0;
+        em {
+          color: #fab318;
+          margin: 0 2px;
+          font-weight: bold;
+        }
+      }
     }
     .channel-name {
       display: block;
@@ -266,6 +288,10 @@ header {
     background: #fff;
     padding: 30px;
     margin-bottom: 30px;
+    .video-title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
   }
   .related-video-item {
     margin-top: 15px;

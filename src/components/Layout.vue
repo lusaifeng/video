@@ -14,7 +14,9 @@
                 <img :src="item.img">
               </div>
               <div class="video-info">
-                <div class="title">{{item.title}}</div>
+                <div class="title">{{item.title}} 
+                  <span class="pull-right">共<em>5</em>课时</span>
+                </div>
                 <div>
                   <span class="views"><i class="fa fa-eye"></i>{{item.view}} </span>
                   <span class="date"><i class="fa fa-clock-o"></i>{{item.update}} </span>
